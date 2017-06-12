@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Java Websocket Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!--<todo>Change version</todo>-->
+    <!--<script src="resource/js/jquery-1.10.2.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link href="./resource/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./resource/css/chat.css" rel="stylesheet">
+    <script src="resource/js/app.js"></script>
+</head>
+
+<body>
+
+<div class="container chat-signin">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Chat sign in</h2>
+        <label for="nickname">Nickname</label>
+        <input type="text" class="form-control" placeholder="Nickname" id="nickname">
+        <!--<div class="btn-group">-->
+            <label for="color">Color</label>
+            <select class="form-control" size="1" id="color">
+                <option value="danger">Red</option>
+                <option value="success">Green</option>
+                <option value="primary">Blue</option>
+            </select>
+        <!--</div>-->
+        <button class="btn btn-large btn-primary" type="submit" id="enterRoom">Sign in</button>
+    </form>
+</div>
+
+<div class="container chat-wrapper">
+    <form id="do-chat" role="form-horizontal">
+        <h2 class="alert alert-success"></h2>
+        <table id="response" class="table table-bordered"></table>
+        <legend>Enter your message..</legend>
+
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="input-block-level" placeholder="Your message..." id="message"/>
+            </div>
+            <div class="col-sm-2">
+                <input type="submit" class="btn btn-large btn-block btn-primary" value="Send message"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <button class="btn btn-large btn-block" type="button" id="leave-room">Leave room</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
